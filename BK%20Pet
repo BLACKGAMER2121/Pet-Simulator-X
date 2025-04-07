@@ -1,1 +1,3 @@
-warn("🚨 Test: Script Loaded Successfully!")
+for _, v in ipairs(workspace:WaitForChild("__THINGS"):WaitForChild("Breakables"):GetChildren()) do
+    warn("🔍 Name:", v.Name, "Type:", v.ClassName)
+end
