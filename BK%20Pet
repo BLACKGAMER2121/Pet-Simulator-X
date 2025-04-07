@@ -1,3 +1,17 @@
+-- Iterate through each child inside Breakables
 for _, v in ipairs(workspace:WaitForChild("__THINGS"):WaitForChild("Breakables"):GetChildren()) do
-    warn("🔍 Name:", v.Name, "Type:", v.ClassName)
+    -- Check if the model has the property OwnerUsername and if it's equal to "ployright"
+    if v:FindFirstChild("OwnerUsername") and v.OwnerUsername == "ployright" then
+        -- Warn the name and type of the model
+        warn("🔍 Clicking on Model:", v.Name, "Type:", v.ClassName, "OwnerUsername:", v.OwnerUsername)
+
+        -- Simulate a "click" on the model by triggering an event or any action you want to simulate
+        -- For this example, let's say we simulate a "Touched" event
+        local touchedPart = v:FindFirstChildWhichIsA("BasePart")
+        if touchedPart then
+            -- Trigger the Touched event by making a "fake" touch.
+            -- Here we can simulate something like making the part "Touched" programmatically.
+            touchedPart.Touched:Fire(v)
+        end
+    end
 end
